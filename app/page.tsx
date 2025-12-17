@@ -195,8 +195,15 @@ const InfoSection = () => (
 );
 
 const Footer = () => (
-  <footer className="bg-stone-950 text-stone-600 py-8 text-center text-sm">
-    <p>&copy; {new Date().getFullYear()} Tangen Torv AS. Alle rettigheter reservert.</p>
+  <footer className="bg-stone-950 text-stone-600 py-8 border-t border-stone-800">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="flex justify-between items-center">
+        <p>&copy; {new Date().getFullYear()} Tangen Torv AS. Alle rettigheter reservert.</p>
+        <a href="/admin" className="text-stone-500 hover:text-amber-500 text-xs transition">
+          Admin
+        </a>
+      </div>
+    </div>
   </footer>
 );
 
