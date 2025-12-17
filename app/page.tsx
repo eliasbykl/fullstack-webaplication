@@ -16,9 +16,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-lg py-2" : "bg-transparent py-4"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-lg py-2" : "bg-transparent py-4"
+        }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 lg:px-8">
         {/* Logo */}
@@ -31,15 +30,14 @@ const Navbar = () => {
           <a href="/" className="hover:text-amber-500 transition font-medium">Hjem</a>
           <a href="/meny" className="hover:text-amber-500 transition font-medium">Meny</a>
           <a href="/about" className="hover:text-amber-500 transition font-medium">Om Oss</a>
-          
+
           {/* ENDRET HER: Linker nå til /bestil-bord */}
           <a
             href="/bestil-bord"
-            className={`px-6 py-2.5 rounded-full font-bold text-sm transition-transform hover:scale-105 ${
-                scrolled 
-                ? "bg-stone-900 text-white hover:bg-stone-800" 
+            className={`px-6 py-2.5 rounded-full font-bold text-sm transition-transform hover:scale-105 ${scrolled
+                ? "bg-stone-900 text-white hover:bg-stone-800"
                 : "bg-white text-stone-900 hover:bg-amber-400"
-            }`}
+              }`}
           >
             Bestill Bord
           </a>
@@ -90,7 +88,7 @@ const HeroSection = () => (
         <span className="italic font-light text-amber-500">Øyeblikket</span>
       </h1>
       <p className="text-lg md:text-xl text-stone-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-        En kulinarisk møteplass i hjertet av Arendal. Vi kombinerer lokale råvarer med moderne kokkekunst for å skape uforglemmelige minner.
+        En kulinarisk møteplass i hjertet av kristiansand. Vi kombinerer lokale råvarer med moderne kokkekunst for å skape uforglemmelige minner.
       </p>
 
       <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -130,15 +128,15 @@ const StorySection = () => (
 
         <div className="space-y-6">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight">
-            Lidenskap i <br/> hvert måltid
+            Lidenskap i <br /> hvert måltid
           </h2>
           <p className="text-lg text-stone-600 leading-relaxed">
-            Hos Tangen Torv handler det om mer enn bare å spise seg mett. Det handler om fellesskap, atmosfære og kjærligheten til gode råvarer. 
+            Hos Tangen Torv handler det om mer enn bare å spise seg mett. Det handler om fellesskap, atmosfære og kjærligheten til gode råvarer.
           </p>
           <p className="text-lg text-stone-600 leading-relaxed">
             Vårt kjøkken er inspirert av både norsk tradisjonsmat og kontinentale smaker, alltid tilberedt med sesongens beste ingredienser fra lokale bønder og fiskere.
           </p>
-          
+
           <div className="pt-4">
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center text-2xl">🥬</div>
@@ -156,11 +154,11 @@ const StorySection = () => (
 const InfoSection = () => (
   <section className="bg-stone-900 text-stone-300 py-20">
     <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-      
+
       <div className="space-y-4">
         <h3 className="text-white text-xl font-serif font-bold mb-2">Finn Oss</h3>
-        <p>Torggata 1, 4800 Arendal</p>
-        <p>Vi ligger midt i hjertet av byen, <br/>med utsikt over torvet.</p>
+        <p>kristiansand</p>
+        <p>Vi ligger midt i hjertet av byen, <br />med utsikt over torvet.</p>
         <a href="https://maps.google.com" target="_blank" className="text-amber-500 hover:text-amber-400 underline inline-block mt-2">Vis i kart</a>
       </div>
 
@@ -177,8 +175,8 @@ const InfoSection = () => (
           </div>
         </div>
         <div className="text-left">
-            <span className="block text-sm text-stone-500 uppercase">Søndag</span>
-            <span className="block font-medium">13:00 - 20:00</span>
+          <span className="block text-sm text-stone-500 uppercase">Søndag</span>
+          <span className="block font-medium">13:00 - 20:00</span>
         </div>
       </div>
 
@@ -187,8 +185,8 @@ const InfoSection = () => (
         <p className="text-2xl font-light text-white">+47 123 45 678</p>
         <p>reservasjon@tangentorv.no</p>
         <div className="pt-4 flex gap-4 justify-center md:justify-start">
-            <div className="w-8 h-8 bg-stone-700 rounded-full hover:bg-amber-500 transition cursor-pointer"></div>
-            <div className="w-8 h-8 bg-stone-700 rounded-full hover:bg-amber-500 transition cursor-pointer"></div>
+          <div className="w-8 h-8 bg-stone-700 rounded-full hover:bg-amber-500 transition cursor-pointer"></div>
+          <div className="w-8 h-8 bg-stone-700 rounded-full hover:bg-amber-500 transition cursor-pointer"></div>
         </div>
       </div>
 
@@ -197,9 +195,9 @@ const InfoSection = () => (
 );
 
 const Footer = () => (
-    <footer className="bg-stone-950 text-stone-600 py-8 text-center text-sm">
-        <p>&copy; {new Date().getFullYear()} Tangen Torv AS. Alle rettigheter reservert.</p>
-    </footer>
+  <footer className="bg-stone-950 text-stone-600 py-8 text-center text-sm">
+    <p>&copy; {new Date().getFullYear()} Tangen Torv AS. Alle rettigheter reservert.</p>
+  </footer>
 );
 
 export default function Home() {
