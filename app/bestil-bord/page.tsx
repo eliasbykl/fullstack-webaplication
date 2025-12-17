@@ -59,36 +59,31 @@ export default function BookingPage() {
     setSubmissionStatus(null);
 
     try {
-      // Kombiner dato + tid til en ISO timestamp for `booking_datetime`
-      const bookingDatetime = new Date(`${formData.date}T${formData.time}`).toISOString();
-
       const { data, error } = await supabase
-        .from('booking')
+        .from('bookings')
         .insert([
           {
-            customer_name: formData.name,
+            name: formData.name,
             email: formData.email,
             phone: formData.phone,
+            date: formData.date,
+            time: formData.time,
             guests: parseInt(formData.guests, 10),
-            booking_datetime: bookingDatetime,
-            notes: formData.message,
+            message: formData.message,
+            status: 'pending',
           },
         ]);
 
-      // Log full response for easier debugging
-      // Some Supabase Error objects store details on non-enumerable props, so use JSON.stringify
       if (data) console.info('Supabase insert data:', data);
       if (error) {
         const serialized = (() => {
           try {
-            // Include non-enumerable props if present
             return JSON.stringify(error, Object.getOwnPropertyNames(error), 2);
           } catch (e) {
             return String(error);
           }
         })();
         console.error('Supabase insert error (serialized):', serialized);
-        // Throw so the outer catch handles UI flow
         throw error;
       }
 
@@ -97,7 +92,6 @@ export default function BookingPage() {
       
     } catch (error) {
       console.error("Feil ved booking:", error);
-      // Nå vil ikke denne linjen gi feilmelding lenger:
       setSubmissionStatus("error");
     } finally {
       setLoading(false);
